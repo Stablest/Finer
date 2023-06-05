@@ -4,7 +4,7 @@ const notFound = require("./middleware/not-found");
 const app = express();
 const optimize = require("./routes/optimize");
 
-app.use(express.raw({ type: "image/jpeg", limit: "50mb" }));
+app.use(express.raw({ type: "image/*", limit: "50mb" }));
 
 // Routes
 
