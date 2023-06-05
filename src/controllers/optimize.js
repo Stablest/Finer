@@ -1,7 +1,7 @@
 const sharp = require("sharp");
 
 const optimizeImage = async (req, res) => {
-  if (!req.body) return res.status(201).json({ sucess: false });
+  if (!req.body) return res.status(400).json({ error: "No body was found" });
 
   let { width, height, fit, type, quality } = req.query;
   width = width && Number.parseInt(width);
